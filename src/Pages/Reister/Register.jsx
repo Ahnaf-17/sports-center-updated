@@ -17,7 +17,9 @@ const Register = () => {
             
             <div className=" min-h-screen bg-neutral">
                 <div className="pt-16 flex flex-col justify-center mb-5 items-center">
+                <Link to='/'>
                 <img src="https://i.ibb.co/xqrZZ95/web-logo.png" alt="" />
+                </Link>
                 
                 </div>
            
