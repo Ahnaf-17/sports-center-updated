@@ -4,42 +4,42 @@
       "name": "Crossfit Training",
       "image": "https://i.ibb.co/JFfVwVb/corssfitjpg.jpg",
       "price": 19.99,
-      "short_description": "A high-quality product with various features."
+      "short_description": "CrossFit training is a high-intensity fitness program that combines elements of weightlifting, cardio, gymnastics, and functional movements to improve overall physical fitness. Join us for an exhilarating fitness experience that will push your limits and help you achieve your peak physical condition. CrossFit training is not just a workout; it's a lifestyle, and this event will introduce you to the intense and rewarding world of CrossFit .Grab your workout attire and be prepared to challenge yourself, break personal records, and embrace the transformational power of weightlifting. Register now to secure your spot and embark on a journey to become a stronger, more resilient you!"
     },
     {
       "id": 2,
       "name": "Weight-Lifting Training",
       "image": "https://i.ibb.co/pjYJP3B/weight-lifting.jpg",
       "price": 24.99,
-      "short_description": "An affordable option for everyday use."
+      "short_description": "Are you ready to sculpt your physique, gain raw strength, and elevate your fitness game? Join us for a Weightlifting Training Workshop that will empower you to unleash your inner athlete and master the art of lifting. Don't miss this opportunity to dive into the world of weightlifting and take your fitness journey to the next level. Whether you're aiming to compete or simply want to get stronger, this workshop will equip you with the knowledge, skills, and confidence to succeed in the weight room.Grab your workout attire and be prepared to challenge yourself, break personal records, and embrace the transformational power of weightlifting. Register now to secure your spot and embark on a journey to become a stronger, more resilient you!"
     },
     {
       "id": 3,
       "name": "Yoga For Beginners",
       "image": "https://i.ibb.co/bRsRpCG/yoga.jpg",
       "price": 29.99,
-      "short_description": "Premium quality with a sleek design."
+      "short_description": "Escape the chaos of daily life and embark on a transformative journey of self-discovery through our Yoga Training Retreat. Immerse yourself in the ancient practice of yoga, rejuvenate your mind and body, and find inner peace in a serene and natural setting.This Yoga Training Retreat is an opportunity to disconnect from the demands of everyday life, reconnect with your inner self, and deepen your yoga practice in a supportive and tranquil environment. Whether you're seeking relaxation, spiritual growth, or physical well-being, this retreat offers a holistic approach to help you achieve your goals.Rediscover balance, harmony, and inner peace as you embark on this transformative journey. Register now to secure your spot and experience the profound benefits of yoga and mindfulness in a serene and nurturing atmosphere."
     },
     {
       "id": 4,
       "name": "Endurance Buildup",
       "image": "https://i.ibb.co/3cQNcSw/power.jpg",
       "price": 14.99,
-      "short_description": "Compact and convenient for on-the-go use."
+      "short_description": "Prepare to push your physical limits and elevate your endurance to new heights at our Endurance Buildup Training Workshop. Whether you're an aspiring athlete, a fitness enthusiast, or simply looking to enhance your stamina, this workshop will equip you with the tools and knowledge to reach your goals.Whether you're training for a marathon, triathlon, or simply want to increase your stamina for daily activities, our Endurance Buildup Training Workshop will empower you with the knowledge and skills to succeed. Join us for a day of learning, practical training, and camaraderie, and embark on your journey to becoming a stronger, more resilient athlete.Register now to secure your spot and take the first step toward achieving your endurance goals!"
     },
     {
       "id": 5,
       "name": "Professional Cycling",
       "image": "https://i.ibb.co/2kVk74L/cycling.jpg",
       "price": 39.99,
-      "short_description": "Advanced features for tech enthusiasts."
+      "short_description": "Gear up for an immersive and intensive Professional Cycling Training Camp designed to elevate your cycling skills to a new level. Whether you're an aspiring competitive cyclist or a dedicated enthusiast, this camp will provide you with the expertise, coaching, and experience to perform at your best .Whether you dream of competing in races, achieving personal bests, or simply enjoying the thrill of cycling, the Professional Cycling Training Camp is your opportunity to train like a pro and reach your cycling goals. Join us for an unforgettable experience that will transform you into a stronger, more confident cyclist.Register now to secure your spot and pedal your way to excellence!"
     },
     {
       "id": 6,
       "name": "Marathon Master",
       "image": "https://i.ibb.co/Yhg55SG/running.webp",
       "price": 9.99,
-      "short_description": "An economical choice for budget-conscious shoppers."
+      "short_description": "Embark on a journey of endurance, discipline, and personal achievement with our Marathon Master Training Program. Whether you're a novice runner aspiring to complete your first marathon or an experienced racer aiming for a personal best, this comprehensive program will equip you with the knowledge, guidance, and support to excel in the world of long-distance running. The Marathon Master Training Program is not just about crossing the finish line; it's about personal growth, perseverance, and the sense of accomplishment that comes with conquering the marathon distance. Join us for an immersive training experience that will empower you to achieve your marathon goals. Don't miss this opportunity to unlock your full running potential and become a true master of the marathon. Register now to secure your spot in this transformative program!"
     }
   ]
   
