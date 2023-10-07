@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Product A",
+      "image": "https://example.com/productA.jpg",
+      "price": 19.99,
+      "short_description": "A high-quality product with various features."
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "image": "https://example.com/productB.jpg",
+      "price": 24.99,
+      "short_description": "An affordable option for everyday use."
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "image": "https://example.com/productC.jpg",
+      "price": 29.99,
+      "short_description": "Premium quality with a sleek design."
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "image": "https://example.com/productD.jpg",
+      "price": 14.99,
+      "short_description": "Compact and convenient for on-the-go use."
+    },
+    {
+      "id": 5,
+      "name": "Product E",
+      "image": "https://example.com/productE.jpg",
+      "price": 39.99,
+      "short_description": "Advanced features for tech enthusiasts."
+    },
+    {
+      "id": 6,
+      "name": "Product F",
+      "image": "https://example.com/productF.jpg",
+      "price": 9.99,
+      "short_description": "An economical choice for budget-conscious shoppers."
+    }
+  ]
+  
