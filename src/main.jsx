@@ -11,6 +11,7 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Reister/Register';
 import About from './Pages/About/About';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import ServiceDetails from './Pages/Home/ServiceDetails';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About></About>
+      },
+      {
+        path: '/service/:id',
+        element: <ServiceDetails></ServiceDetails>
       }
     ]
   },
