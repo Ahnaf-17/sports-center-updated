@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import swal from 'sweetalert';
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -16,6 +17,7 @@ const Register = () => {
         e.preventDefault();
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget);
+        const name = form.get('name')
         const email = form.get('email');
         const password = form.get('password')
         const upperCase = /[A-Z]/;
@@ -29,6 +31,13 @@ const Register = () => {
         .then(result =>{
             console.log(result.user)
             swal("Good job!", "Registration successful", "success");
+
+            // update 
+            updateProfile(result.user, {
+                displayName:name
+            })
+            .then(()=> console.log("updated"))
+            .catch()
         })
         .catch(error =>{
             console.error(error);

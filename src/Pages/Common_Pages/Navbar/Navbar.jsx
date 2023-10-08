@@ -53,21 +53,21 @@ const Navbar = () => {
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
                         {/* <img src={avatar} /> */}
+
                     </div>
                 </label>
 
                 {
                     user ?
-                        <button onClick={handleSignOut} className="btn">Log out</button>
+                        <div className="md:flex md:justify-center md:items-center md:gap-2">
+                            <p>Welcome,{user.displayName}</p>
+                            <button onClick={handleSignOut} className="btn">Log out</button>
+                        </div>
                         :
                         <Link to='/login'>
                             <button className="btn bg-yellow-400 font-bold">Login</button>
                         </Link>
                 }
-
-                {/* <Link to='/login'>
-                    <button className="btn bg-yellow-400 font-bold">Login</button>
-                </Link> */}
 
             </div>
         </div>
