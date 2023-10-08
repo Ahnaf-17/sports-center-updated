@@ -16,6 +16,7 @@ import ShowTrainers from './Pages/Home/ShowTrainers';
 import Events from './Pages/Events/Events';
 import Contact from './Pages/Contact/Contact';
 import AuthProvider from './Provider/AuthProvider';
+import PrivateRoute from './PrivateRout/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/service/:id',
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute>
+          <ServiceDetails></ServiceDetails>
+        </PrivateRoute>,
         loader: ()=> fetch('/service.json')
       },
       {

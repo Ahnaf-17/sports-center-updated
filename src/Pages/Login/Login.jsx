@@ -1,13 +1,27 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+    const {logIn} = useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate()
+
     const handleLogin = e =>{
         e.preventDefault();
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget);
-        console.log(form)
- 
+        const email = form.get('email')
+        const password = form.get('password')
+        logIn(email,password)
+        .then(result =>{
+            console.log(result.user)
+            navigate(location?.state ? location.state: '/')
+        })
+        .catch(error =>{
+            console.error(error)
+        }) 
     }
     return (
         <div className=" min-h-screen bg-neutral">
