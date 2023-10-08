@@ -2,9 +2,11 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { FcGoogle } from 'react-icons/fc';
+
 
 const Login = () => {
-    const {logIn} = useContext(AuthContext)
+    const {logIn,googleLogin} = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate()
 
@@ -23,6 +25,18 @@ const Login = () => {
             console.error(error)
         }) 
     }
+    const handleGoogleLogin = () =>{
+        googleLogin()
+        .then(result =>{
+            console.log(result.user)
+            navigate(location?.state ? location.state: '/')
+            
+        })
+        .catch(error =>{
+            console.error(error)
+        }) 
+
+    }
     return (
         <div className=" min-h-screen bg-neutral">
             <div className="pt-16 flex flex-col justify-center mb-5 items-center">
@@ -32,7 +46,7 @@ const Login = () => {
                 
                 </div>
          
-            <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto  bg-yellow-400 rounded-xl">
+            <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 md:mx-auto mx-4  bg-yellow-400 rounded-xl">
             <div>
                 <h2 className="text-3xl text-center text-white font-bold ">Please Login</h2>
                 </div>
@@ -52,8 +66,14 @@ const Login = () => {
                 <div className="form-control mt-6">
                     <button className="btn bg-neutral text-white font-bold">Login</button>
                 </div>
+                <div className="form-control text-center">
+                    <h2 className="text-white font-bold">Or</h2>
+                </div>
+                <div className="form-control mt-2">
+                    <button onClick={handleGoogleLogin} className="btn bg-white text-blue-700 font-extrabold">LogIn with Google <FcGoogle className="text-2xl"></FcGoogle></button>
+                </div>
             </form>
-            <p className="text-center text-white mt-3">Don't have an account? <Link className="text-blue-300 font-bold" to='/register'>Register</Link></p>
+            <p className="text-center pb-10 text-white mt-3">Don't have an account? <Link className="text-blue-300 font-bold" to='/register'>Register</Link></p>
             </div>
     );
 };

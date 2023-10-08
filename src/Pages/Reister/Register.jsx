@@ -1,11 +1,16 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import swal from 'sweetalert';
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+
+    const [regError, setRegError] = useState('')
+    const [regSuccess, setRegSuccess] = useState('')
+    const {createUser} = useContext(AuthContext);
+    // const err = swal("Error", "recheck", "error")
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -13,13 +18,21 @@ const Register = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password')
+        const upperCase = /[A-Z]/;
+        if(password <6 || !upperCase.test(password) ||!password.match(/[!"#$%&'()*+,-.:;<=>?@[\]^_`{|}~]/)){
+            swal("Error", "Minimum 6 character, 1 uppercase and one special character needed", "error");
+            return;
+        }
+        setRegError('')
+        setRegSuccess('')
         createUser(email,password)
         .then(result =>{
             console.log(result.user)
             swal("Good job!", "Registration successful", "success");
         })
         .catch(error =>{
-            console.error(error)
+            console.error(error);
+            swal("Error", "This email is already used", "error")
         })
 
 
@@ -63,6 +76,7 @@ const Register = () => {
                     <button className="btn bg-neutral text-white font-bold">Register</button>
                 </div>
             </form>
+
             <p className="text-center mt-3 text-white">Already have an account,  <Link className="text-blue-400 font-semibold" to='/login'>Login</Link></p>
             </div>
         </div>
