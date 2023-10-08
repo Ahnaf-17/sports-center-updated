@@ -12,6 +12,7 @@ import Register from './Pages/Reister/Register';
 import About from './Pages/About/About';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import ServiceDetails from './Pages/Home/ServiceDetails';
+import ShowTrainers from './Pages/Home/ShowTrainers';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('/service.json')
+        loader: ()=> fetch('/service.json'),
       },
       {
         path: '/login',
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         path: '/service/:id',
         element: <ServiceDetails></ServiceDetails>,
         loader: ()=> fetch('/service.json')
+      },
+      {
+        path: '/trainer',
+        element: <ShowTrainers></ShowTrainers>,
+        loader: ()=> fetch('/trainer.json')
       }
     ]
   },

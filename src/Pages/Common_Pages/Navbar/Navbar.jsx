@@ -8,7 +8,7 @@ const Navbar = () => {
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/events'>Events</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
-        <li><NavLink to='/news'>News</NavLink></li>
+        <li><NavLink to='/trainer'>Trainers</NavLink></li>
     </>
     return (
         <div className="navbar  bg-neutral text-neutral-content">
