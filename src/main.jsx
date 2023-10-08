@@ -13,6 +13,8 @@ import About from './Pages/About/About';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import ServiceDetails from './Pages/Home/ServiceDetails';
 import ShowTrainers from './Pages/Home/ShowTrainers';
+import Events from './Pages/Events/Events';
+import Contact from './Pages/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,15 @@ const router = createBrowserRouter([
         path: '/trainer',
         element: <ShowTrainers></ShowTrainers>,
         loader: ()=> fetch('/trainer.json')
+      },
+      {
+        path: '/events',
+        element: <Events></Events>,
+        loader: ()=> fetch('/events.json')
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       }
     ]
   },

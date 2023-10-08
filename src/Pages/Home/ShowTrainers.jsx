@@ -8,7 +8,7 @@ const ShowTrainers = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="grid grid-cols-2 gap-5 mx-14"> 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-14 my-16 "> 
             {
                     trainer.map(aTrainer => <Trainers key={trainer.id}
                     trainer={aTrainer}

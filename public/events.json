@@ -1,0 +1,49 @@
+[
+    {
+    "event_title": "Tour de Lakemba",
+    "event_time": "2023-11-15 10:00 AM",
+    "event_level": "Intermediate",
+    "event_details": "Join us for an exciting Cycling tournament at the local community center. Show off your ability and compete with other cycling enthusiasts. Don't miss the slam-dunk action!",
+    "event_img": "https://i.ibb.co/2kVk74L/cycling.jpg"
+  },
+  
+  {
+    "event_title": "Crossfit Challenge",
+    "event_time": "2023-12-02 2:30 PM",
+    "event_level": "Advanced",
+    "event_details": "Witness the clash of crossfit titans in the championship . The best individual from around the region will compete for glory and the coveted trophy.",
+    "event_img": "https://i.ibb.co/JFfVwVb/corssfitjpg.jpg"
+  },
+  
+  {
+    "event_title": "Lakemba 10k Run",
+    "event_time": "2023-10-20 3:00 PM",
+    "event_level": "Beginner",
+    "event_details": "Run for a noble cause in our marathon event. Raise funds and awareness for local charities while testing your endurance in this challenging race.",
+    "event_img": "https://i.ibb.co/Yhg55SG/running.webp"
+  },
+  
+  {
+    "event_title": "Paramatta Half Marathon",
+    "event_time": "2023-11-28 8:00 AM",
+    "event_level": "All Levels",
+    "event_details": "Run for a noble cause in our marathon event. Raise funds and awareness for local charities while testing your endurance in this challenging race.",
+    "event_img": "https://i.ibb.co/Yhg55SG/running.webp"
+  },
+  
+  {
+    "event_title": "Marathon for a Cause",
+    "event_time": "2023-12-10 7:00 AM",
+    "event_level": "Advanced",
+    "event_details": "Run for a noble cause in our marathon event. Raise funds and awareness for local charities while testing your endurance in this challenging race.",
+    "event_img": "https://i.ibb.co/mcssG3R/marathon-Event.jpg"
+  },
+  
+  {
+    "event_title": "Swimming Championships",
+    "event_time": "2023-11-05 1:00 PM",
+    "event_level": "Professional",
+    "event_details": "Watch world-class swimmers compete in the swimming championships. Witness record-breaking performances and thrilling races in the pool.",
+    "event_img": "https://i.ibb.co/QHdgrGp/swimming.jpg"
+  }
+]  
