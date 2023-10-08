@@ -7,6 +7,7 @@ import Footer from "../Common_Pages/Footer/Footer";
 
 const Home = () => {
     const service = useLoaderData();
+    // console.log(service)
 
     return (
         <div >
@@ -20,6 +21,8 @@ const Home = () => {
                     ></Services>)
                 }
             </div>
+
+
             <section>
                 <h3 className="text-4xl font-extrabold text-black italic text-center mt-10 mb-10">Meet our trainers</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-14">
@@ -39,7 +42,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="flex justify-center mt-5 mb-10">
-                    <Link to='/trainer'>
+                    <Link to={`/trainer`}>
                         <button className="btn bg-yellow-400">See All</button>
                     </Link>
                 </div>
@@ -97,7 +100,7 @@ const Home = () => {
                 
             </section>
             <div className="flex justify-center mt-5 mb-10">
-                    <Link to='/events'>
+                    <Link to={`/events`}>
                         <button className="btn bg-yellow-400">Explore More</button>
                     </Link>
                 </div>

@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
         return <span className="loading loading-dots loading-lg"></span>
     }
     if(user){
-        return children
+        return children;
     }
     return <Navigate state={location.pathname} to='/login'></Navigate>
 };

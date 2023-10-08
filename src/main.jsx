@@ -11,11 +11,11 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Reister/Register';
 import About from './Pages/About/About';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
-import ServiceDetails from './Pages/Home/ServiceDetails';
 import ShowTrainers from './Pages/Home/ShowTrainers';
 import Events from './Pages/Events/Events';
 import Contact from './Pages/Contact/Contact';
 import AuthProvider from './Provider/AuthProvider';
+import Details from './Pages/Home/Details';
 import PrivateRoute from './PrivateRout/PrivateRoute';
 
 const router = createBrowserRouter([
@@ -43,19 +43,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/service/:id',
-        element: <PrivateRoute>
-          <ServiceDetails></ServiceDetails>
-        </PrivateRoute>,
+        element: 
+          <PrivateRoute><Details></Details></PrivateRoute>
+    ,
         loader: ()=> fetch('/service.json')
       },
       {
         path: '/trainer',
-        element: <ShowTrainers></ShowTrainers>,
+        element: <PrivateRoute><ShowTrainers></ShowTrainers></PrivateRoute>,
         loader: ()=> fetch('/trainer.json')
       },
       {
         path: '/events',
-        element: <Events></Events>,
+        element: <PrivateRoute><Events></Events></PrivateRoute>,
         loader: ()=> fetch('/events.json')
       },
       {
