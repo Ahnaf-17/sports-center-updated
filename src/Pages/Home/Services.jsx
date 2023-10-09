@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Services = ({ service }) => {
     const { id, name, image, short_description, price } = service
     return (
-        <div className="card bg-neutral  rounded-xl  md:rounded-none" data-aos="zoom-in" data-aos-duration="1000">
+        <div className="card bg-neutral  rounded-xl  md:rounded-none" data-aos="fade-up" data-aos-duration="1000">
             <figure><img className="h-[300px] w-full" src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-yellow-400 font-bold">{name}</h2>
