@@ -4,8 +4,13 @@ import Banner from "../Common_Pages/Banner/Banner";
 import Navbar from "../Common_Pages/Navbar/Navbar";
 import Services from "./Services";
 import Footer from "../Common_Pages/Footer/Footer";
-
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const Home = () => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
     const service = useLoaderData();
     // console.log(service)
 
@@ -14,7 +19,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <h3 className="text-4xl font-extrabold text-black italic text-center mt-10 mb-10">Services we provide</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 mx-14" >
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 mx-14" data-aos="fade-up " >
                 {
                     service.map(aService => <Services key={service.id}
                         service={aService}
@@ -23,17 +28,17 @@ const Home = () => {
             </div>
 
 
-            <section>
+            <section >
                 <h3 className="text-4xl font-extrabold text-black italic text-center mt-10 mb-10">Meet our trainers</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-14">
-                    <div className="card card-side bg-neutral shadow-xl mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-14"  data-aos="flip-up" data-aos-duration="1000">
+                    <div className="card card-side bg-neutral shadow-xl mt-10" >
                         <figure><img className="h-[250px] w-[180px]" src='https://i.ibb.co/FxZz8bq/strength-trainer.jpg' alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title text-white font-bold">Sarah Smith</h2>
                             <p className="text-white">Expert in : Strength and Conditioning</p>
                         </div>
                     </div>
-                    <div className="card card-side bg-neutral shadow-xl mt-10">
+                    <div className="card card-side bg-neutral shadow-xl mt-10" data-aos="flip-down" data-aos-duration="1000">
                         <figure><img className="h-[250px] w-[180px]" src='https://i.ibb.co/Ph7mXyy/yoga-trainer.jpg' alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title text-white font-bold">Lisa Johnson</h2>
@@ -48,11 +53,12 @@ const Home = () => {
                 </div>
             </section>
 
-            <h3 className="text-4xl font-extrabold text-black italic text-center mt-20 mb-10">Explore Our Events</h3>
-            <section className="grid md:grid-cols-2 grid-cols-1 gap-4 mx-14 mb-16">
+            <section className="">
                 
+            <h3 className="text-4xl font-extrabold text-black italic text-center mt-20 mb-10">Explore Our Events</h3>
 
-                <div className="relative grid h-[40rem] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mx-14 mb-16 ">
+                <div className="relative grid h-[40rem] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700" data-aos="zoom-out-down" data-aos-duration="1000">
                     <div >
                         <img className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent  bg-cover bg-clip-border bg-center text-gray-700 shadow-none" src="https://i.ibb.co/2kVk74L/cycling.jpg" alt="" />
                         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50"></div>
@@ -74,7 +80,7 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className="relative grid h-[40rem] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
+                <div className="relative grid h-[40rem] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700" data-aos="zoom-out-up" data-aos-duration="1000">
                     <div >
                         <img className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent  bg-cover bg-clip-border bg-center text-gray-700 shadow-none" src="https://i.ibb.co/Yhg55SG/running.webp" alt="" />
                         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50"></div>
@@ -96,14 +102,15 @@ const Home = () => {
 
                     </div>
                 </div>
+                </div>
 
-                
-            </section>
-            <div className="flex justify-center mt-5 mb-10">
+                <div className="flex justify-center mt-5 mb-10">
                     <Link to={`/events`}>
                         <button className="btn bg-yellow-400">Explore More</button>
                     </Link>
                 </div>
+            </section>
+            
 
             <Footer></Footer>
         </div>
