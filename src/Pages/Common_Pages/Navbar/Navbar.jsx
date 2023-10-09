@@ -4,12 +4,12 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
-    const handleSignOut = () =>{
+    const handleSignOut = () => {
         logOut()
-        .then()
-        .catch(error =>{
-            console.error(error)
-        })
+            .then()
+            .catch(error => {
+                console.error(error)
+            })
     }
 
 
@@ -52,12 +52,43 @@ const Navbar = () => {
             <div className="navbar-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        {/* <img src={avatar} /> */}
+                        {/* <img src={avatar} /> https://i.ibb.co/ZBXgGBM/user.png*/}
 
                     </div>
                 </label>
+                <div className="dropdown dropdown-end">
+                    {
+                        user ? <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src={user.photoURL} />
+                        </div>
+                    </label> 
+                    :
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src="https://i.ibb.co/ZBXgGBM/user.png" alt="https://i.ibb.co/ZBXgGBM/user.png"/>
+                        </div>
+                    </label>
+                    }
+                    
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+                        <li>
+                            {
+                                user ?
+                                    <div className="flex flex-col items-start justify-start text-left">
+                                        <p>Welcome,{user.displayName}</p>
+                                        <button onClick={handleSignOut} className="btn">Log out</button>
+                                    </div>
+                                    :
+                                    <Link to='/login'>
+                                        <button className="btn bg-yellow-400 font-bold">Login</button>
+                                    </Link>
+                            }
+                        </li>
+                    </ul>
+                </div>
 
-                {
+                {/* {
                     user ?
                         <div className="md:flex md:justify-center md:items-center md:gap-2">
                             <p>Welcome,{user.displayName}</p>
@@ -67,7 +98,7 @@ const Navbar = () => {
                         <Link to='/login'>
                             <button className="btn bg-yellow-400 font-bold">Login</button>
                         </Link>
-                }
+                } */}
 
             </div>
         </div>

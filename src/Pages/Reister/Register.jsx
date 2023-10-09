@@ -18,6 +18,7 @@ const Register = () => {
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget);
         const name = form.get('name')
+        const imgUrl = form.get('image')
         const email = form.get('email');
         const password = form.get('password')
         const upperCase = /[A-Z]/;
@@ -34,7 +35,9 @@ const Register = () => {
 
             // update 
             updateProfile(result.user, {
-                displayName:name
+                displayName:name,
+                photoURL:imgUrl
+
             })
             .then(()=> console.log("updated"))
             .catch()
@@ -73,6 +76,12 @@ const Register = () => {
                         <span className="label-text font-bold text-white">Your Name</span>
                     </label>
                     <input type="text" placeholder="Your Name" name="name" className="input input-bordered" required />
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text font-bold text-white">Image url</span>
+                    </label>
+                    <input type="text" placeholder="image_url(optional)" name="image" className="input input-bordered"  />
                 </div>
                 <div className="form-control">
                     <label className="label">
